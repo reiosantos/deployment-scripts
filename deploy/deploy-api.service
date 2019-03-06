@@ -1,0 +1,12 @@
+[Unit]
+Description=Script manages the api service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/username/deployment/deploy
+ExecStart=/bin/bash /home/username/deployment/deploy/run-server.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
